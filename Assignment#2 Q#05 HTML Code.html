@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qiestion No 5</title>
+    <script src="./Assignment#2 Q#05 Code.js"></script>
+    <style type="text/css">
+        .container{
+           max-width: 768px;
+           margin: auto; 
+        }
+        #box{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-family: Arial;
+            font-size: 18px;
+        }
+        button{
+            padding: 12px 16px;
+            border: transparent;
+            font-size: 16px;
+            font-weight: bolder;
+            color:whitesmoke;
+            background: rgba(156, 187, 24, 0.9);
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.815);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        button:hover{
+            box-shadow: none;
+            background: rgba(29, 175, 67, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div id="box">
+        <h1>Color Changing JS Function</h1>
+        <div>
+        <p id="paraOne">
+        <b>Id: paraOne</b> <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, veniam aliquam eos dicta id ipsam culpa nam voluptatibus odit odio voluptatem harum dolorum, numquam vitae facilis tenetur ullam nisi. Doloribus.
+        </p>
+        </div>
+        <div>
+        <p id="paraTwo">
+        <b>Id: paraTwo</b> <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, veniam aliquam eos dicta id ipsam culpa nam voluptatibus odit odio voluptatem harum dolorum, numquam vitae facilis tenetur ullam nisi. Doloribus.
+        </p>
+        </div>
+        <div>
+        <button onClick="getValues()">
+        Change Color
+        </button>
+        </div>
+        </div>
+    </div>
+    
+</body>
+<script type="text/javascript">
+        //Get Values from user 
+        function getValues(){
+            let mySelectionId = prompt("Enter the your selected id of element");
+            let mySelectionClr = prompt("Enter the your selected background color");
+          colorChanger(mySelectionId,mySelectionClr);
+        }
+        function colorChanger(getHtmlElement, getColor){
+            let setColor = document.getElementById(getHtmlElement);
+          setColor.style.backgroundColor=getColor;
+        }
+ </script>
+</html>
